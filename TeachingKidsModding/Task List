@@ -1,0 +1,4 @@
+1a: Create a texture for a new block, and apply that texture to funBlock.
+1b: Create a texture for a new item, and apply that texture to funItem.
+2a: Create a shaped recipe for funBlock.
+2b: Create a smelting recipe for funItem.
