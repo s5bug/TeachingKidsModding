@@ -1,4 +1,6 @@
-package org.jointheleague.mod;
+package org.jointheleague.mod.block;
+
+import org.jointheleague.mod.LeagueMod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -8,6 +10,7 @@ public class FunBlock extends Block {
 
 	public FunBlock() {
 		super(Material.coral);
+		setBlockName("funBlock");
 	}
 	
 	@Override

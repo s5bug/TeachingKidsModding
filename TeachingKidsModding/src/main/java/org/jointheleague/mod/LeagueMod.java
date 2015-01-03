@@ -1,5 +1,8 @@
 package org.jointheleague.mod;
 
+import org.jointheleague.mod.block.FunBlock;
+import org.jointheleague.mod.funItem.FunItem;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
@@ -17,15 +20,18 @@ public class LeagueMod {
 	
 	public static final String MODID = "LeagueMod";
 	public static FunBlock funBlock;
+	public static FunItem funItem;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
 		funBlock = new FunBlock();
+		funItem = new FunItem();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
 		GameRegistry.registerBlock(funBlock, "funBlock");
+		GameRegistry.registerItem(funItem, "funItem");
 	}
 
 	@EventHandler
@@ -42,6 +48,8 @@ public class LeagueMod {
 			'X', Blocks.dirt // Dirt is the item you need to put in everywhere there is
 							 // an X in the grid.
 		});
+		// The first is the input (top) next the output (right) then the xp.
+		GameRegistry.addSmelting(funBlock, new ItemStack(funItem), 7.0F);
 	}
 
 }
