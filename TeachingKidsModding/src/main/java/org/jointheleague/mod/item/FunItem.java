@@ -1,4 +1,4 @@
-package org.jointheleague.mod.funItem;
+package org.jointheleague.mod.item;
 
 import org.jointheleague.mod.LeagueMod;
 
@@ -9,6 +9,7 @@ public class FunItem extends Item {
 	
 	public FunItem() {
 		setUnlocalizedName("funItem");
+		setCreativeTab(LeagueMod.funTab);
 	}
 	
 	@Override

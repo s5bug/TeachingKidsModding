@@ -11,6 +11,7 @@ public class FunBlock extends Block {
 	public FunBlock() {
 		super(Material.coral);
 		setBlockName("funBlock");
+		setCreativeTab(LeagueMod.funTab);
 	}
 	
 	@Override
