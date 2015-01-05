@@ -1,4 +1,4 @@
-package org.jointheleague.mod.funItem;
+package org.jointheleague.mod.item;
 
 import org.jointheleague.mod.LeagueMod;
 

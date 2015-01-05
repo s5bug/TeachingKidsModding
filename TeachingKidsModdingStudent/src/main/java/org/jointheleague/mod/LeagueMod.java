@@ -1,10 +1,12 @@
 package org.jointheleague.mod;
 
 import org.jointheleague.mod.block.FunBlock;
-import org.jointheleague.mod.funItem.FunItem;
+import org.jointheleague.mod.item.FunItem;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
@@ -21,11 +23,19 @@ public class LeagueMod {
 	public static final String MODID = "LeagueMod";
 	public static FunBlock funBlock;
 	public static FunItem funItem;
+	public static CreativeTabs funTab;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
 		funBlock = new FunBlock();
 		funItem = new FunItem();
+		funTab  = new CreativeTabs("funTab") {
+			
+			@Override
+			public Item getTabIconItem() {
+				return funItem;
+			}
+		};
 	}
 
 	@EventHandler
